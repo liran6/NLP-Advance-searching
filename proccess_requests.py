@@ -12,7 +12,7 @@ class JobSimilarityClass:
 
     def get_best_jobs(self, job_titles, job_ids, user_prompt, k=5):
 
-        encoded_jobs = self.model.encode(job_titles)# transform each title to a vector size of 768 -to ask madar
+        encoded_jobs = self.model.encode(job_titles)# transform each title to a vector size of 768
         encoded_kw = self.model.encode([user_prompt])# transform the user search text to a vector size of 768
 
         # [(similarity, title, id) .... ]
